@@ -13,12 +13,30 @@
       "cycleNo": 1,
       "cycleStart": null,
       "cycleSeed": 3200,
-      "lastProcessed": null,
-      "refClose": null,
-      "pending": null,
+      "lastProcessed": "2026-09-29",
+      "refClose": 77.46,
+      "pending": {
+        "basedOn": "2026-09-29",
+        "phase": "first",
+        "unit": 160,
+        "starPct": 15,
+        "starPoint": null,
+        "orders": [
+          {
+            "side": "buy",
+            "kind": "first",
+            "type": "LOC",
+            "price": 89.08,
+            "qty": 2,
+            "tInc": 1,
+            "label": "첫 매수 · 직전 종가 +15% LOC (사실상 종가 매수)"
+          }
+        ],
+        "notes": []
+      },
       "cycles": [],
       "log": []
     }
   ],
-  "updatedAt": null
+  "updatedAt": "2026-09-29T23:42:12.688Z"
 }
