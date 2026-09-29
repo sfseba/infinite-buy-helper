@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "positions": [
+    {
+      "id": "TQQQ-main",
+      "ticker": "TQQQ",
+      "splits": 20,
+      "seed": 3200,
+      "cash": 3200,
+      "qty": 0,
+      "avg": 0,
+      "T": 0,
+      "cycleNo": 1,
+      "cycleStart": null,
+      "cycleSeed": 3200,
+      "lastProcessed": null,
+      "refClose": null,
+      "pending": null,
+      "cycles": [],
+      "log": []
+    }
+  ],
+  "updatedAt": null
+}

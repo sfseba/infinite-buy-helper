@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>무한매수 도우미</title>
+  <meta name="description" content="무한매수법 주문표 계산기 · 체결 입력으로 T·평단·잔금 자동 갱신 · 사이클 기록 · 잔고 대조">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>무한매수 도우미</h1>
+        <p class="sub">오늘 넣을 주문을 계산하고, 체결을 입력하면 장부가 자동으로 바뀌어요. 주문은 직접 넣습니다.</p>
+      </div>
+      <div class="tabs" id="tabs" role="tablist" aria-label="포지션"></div>
+    </header>
+
+    <!-- 포지션이 없을 때: 시작 화면 -->
+    <section class="card" id="setup" hidden>
+      <h2>새로 시작하기</h2>
+      <div class="fields">
+        <label>종목<select id="su-ticker"><option>TQQQ</option><option>SOXL</option></select></label>
+        <label>분할 수<select id="su-splits"><option>20</option><option>30</option><option>40</option></select></label>
+        <label>원금 (원)<input id="su-krw" inputmode="numeric" value="4500000"></label>
+        <label>환율 (원/$)<input id="su-fx" inputmode="decimal" value="1390"></label>
+        <label>직전 종가 ($)<input id="su-close" inputmode="decimal" placeholder="예: 77.41"></label>
+      </div>
+      <p class="empty" id="su-hint"></p>
+      <div class="btns">
+        <button class="btn primary" id="su-start">시작하기</button>
+        <button class="btn" id="su-cancel" hidden>취소</button>
+      </div>
+      <p class="empty">봇을 쓰고 있다면 아래 <b>설정 · 백업</b>에서 봇 장부를 불러올 수 있어요.</p>
+    </section>
+
+    <div class="grid" id="main" hidden>
+      <div class="col">
+        <section class="card" aria-labelledby="h-orders">
+          <div class="card-head"><h2 id="h-orders">오늘의 주문</h2><span class="chip" id="phase"></span></div>
+          <div class="stats">
+            <div class="stat"><span>1회 매수금</span><b id="st-unit">–</b></div>
+            <div class="stat"><span>별%</span><b id="st-star">–</b></div>
+            <div class="stat"><span>별지점</span><b id="st-point">–</b></div>
+            <div class="stat"><span>T / 분할</span><b id="st-t">–</b></div>
+          </div>
+          <div class="orders" id="orders"></div>
+          <div id="order-notes" class="orders"></div>
+          <div class="fields">
+            <label>직전 종가 ($)<input id="ref-close" inputmode="decimal"></label>
+          </div>
+          <div class="btns"><button class="btn" id="recalc">이 종가로 주문 다시 계산</button></div>
+        </section>
+
+        <section class="card" aria-labelledby="h-fill">
+          <h2 id="h-fill">체결 입력 (주문 넣은 다음 날)</h2>
+          <p class="empty">지난 거래일의 종가와 고가를 넣으면 체결 여부를 추정해요. 증권사 앱의 체결 내역과 다르면 직접 고치세요.</p>
+          <div class="fields">
+            <label>거래일<input id="fx-date" type="date"></label>
+            <label>종가 ($)<input id="fx-close" inputmode="decimal"></label>
+            <label>고가 ($)<input id="fx-high" inputmode="decimal"></label>
+          </div>
+          <div class="btns"><button class="btn" id="fx-detect">체결 추정</button></div>
+          <div id="fx-list"></div>
+          <div id="fx-preview"></div>
+          <div class="btns"><button class="btn primary" id="fx-apply" disabled>장부에 반영</button></div>
+        </section>
+      </div>
+
+      <div class="col">
+        <section class="card" aria-labelledby="h-book">
+          <div class="card-head"><h2 id="h-book">현재 장부</h2><button class="btn" id="bk-edit">직접 수정</button></div>
+          <div class="diff" id="book"></div>
+          <div id="bk-form" hidden>
+            <div class="fields">
+              <label>T<input id="bk-T" inputmode="decimal"></label>
+              <label>보유 수량<input id="bk-qty" inputmode="numeric"></label>
+              <label>평단 ($)<input id="bk-avg" inputmode="decimal"></label>
+              <label>남은 현금 ($)<input id="bk-cash" inputmode="decimal"></label>
+            </div>
+            <div class="btns" style="margin-top:10px"><button class="btn primary" id="bk-save">저장</button><button class="btn" id="bk-cancel">취소</button></div>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="h-rec">
+          <h2 id="h-rec">잔고 대조</h2>
+          <p class="empty">증권사 앱의 값을 넣으면 장부와 비교해요. 일주일에 한 번 확인하면 좋아요.</p>
+          <div class="fields">
+            <label>보유 수량<input id="rc-qty" inputmode="numeric"></label>
+            <label>평단 ($)<input id="rc-avg" inputmode="decimal"></label>
+            <label>달러 예수금 ($)<input id="rc-cash" inputmode="decimal" placeholder="선택"></label>
+          </div>
+          <div id="rc-result"></div>
+          <div class="btns"><button class="btn" id="rc-check">대조하기</button><button class="btn" id="rc-adopt" hidden>증권사 값으로 맞추기</button></div>
+        </section>
+
+        <section class="card" aria-labelledby="h-cyc">
+          <h2 id="h-cyc">사이클 기록</h2>
+          <div class="table-wrap" id="cycles"></div>
+          <details><summary>최근 장부 변경 내역</summary><ul class="log" id="log"></ul></details>
+        </section>
+
+        <section class="card" aria-labelledby="h-bak">
+          <h2 id="h-bak">설정 · 백업</h2>
+          <p class="empty">장부는 이 브라우저에만 저장돼요. 봇을 쓴다면 여기서 내보낸 JSON을 저장소의 <code>data/state.json</code>에 붙여넣으세요.</p>
+          <div class="btns">
+            <button class="btn" id="bk-copy">JSON 복사</button>
+            <button class="btn" id="bk-download">JSON 저장</button>
+            <button class="btn" id="bk-bot">봇 장부 불러오기</button>
+            <button class="btn" id="bk-new">포지션 추가</button>
+          </div>
+          <textarea id="bk-json" aria-label="JSON 붙여넣기" placeholder="백업한 JSON을 붙여넣고 '불러오기'를 누르세요"></textarea>
+          <div class="btns"><button class="btn" id="bk-import">붙여넣은 JSON 불러오기</button><button class="btn danger" id="bk-del">이 포지션 삭제</button></div>
+          <div id="bk-msg"></div>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <span>V4.0 일반모드 공개 요약을 바탕으로 계산해요. 공식 규칙은 <a href="https://cafe.naver.com/infinitebuying" target="_blank" rel="noopener">라오어 무한매수법 카페</a>에서 확인하세요.</span>
+      <span>이 도구는 주문을 넣지 않아요. 투자 판단과 결과에 대한 책임은 사용자에게 있어요.</span>
+    </footer>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

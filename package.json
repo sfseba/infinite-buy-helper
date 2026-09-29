@@ -1,0 +1,14 @@
+{
+  "name": "infinite-buy-helper",
+  "version": "0.1.0",
+  "description": "무한매수법 주문표 계산기와 텔레그램 알림 봇 (주문은 직접)",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "daily": "node bot/daily.mjs",
+    "dry": "node bot/daily.mjs --dry"
+  }
+}
