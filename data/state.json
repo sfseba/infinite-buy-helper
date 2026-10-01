@@ -6,37 +6,68 @@
       "ticker": "TQQQ",
       "splits": 20,
       "seed": 3200,
-      "cash": 3200,
-      "qty": 0,
-      "avg": 0,
-      "T": 0,
+      "cash": 3043.94,
+      "qty": 2,
+      "avg": 78.03,
+      "T": 1,
       "cycleNo": 1,
-      "cycleStart": null,
+      "cycleStart": "2026-09-30",
       "cycleSeed": 3200,
-      "lastProcessed": "2026-09-29",
-      "refClose": 77.46,
+      "lastProcessed": "2026-09-30",
+      "refClose": 78.03,
       "pending": {
-        "basedOn": "2026-09-29",
-        "phase": "first",
-        "unit": 160,
-        "starPct": 15,
-        "starPoint": null,
+        "basedOn": "2026-09-30",
+        "phase": "front",
+        "unit": 160.21,
+        "starPct": 13.5,
+        "starPoint": 88.56,
         "orders": [
           {
             "side": "buy",
-            "kind": "first",
+            "kind": "avg",
             "type": "LOC",
-            "price": 89.08,
+            "price": 78.03,
             "qty": 2,
             "tInc": 1,
-            "label": "첫 매수 · 직전 종가 +15% LOC (사실상 종가 매수)"
+            "label": "평단 매수 · 1회 매수금 전부 (소액 보정)"
+          },
+          {
+            "side": "sell",
+            "kind": "target",
+            "type": "LIMIT",
+            "price": 89.73,
+            "qty": 2,
+            "tInc": 0,
+            "label": "목표가 매도 · 나머지 전부, 평단 +15%"
           }
         ],
-        "notes": []
+        "notes": [
+          {
+            "level": "info",
+            "text": "절반 금액으로는 1주를 살 수 없어서 1회 매수금을 평단 LOC 한 건으로 모았어요. 원래 규칙과 조금 달라요."
+          },
+          {
+            "level": "info",
+            "text": "보유 수량이 4주 미만이라 쿼터 매도는 건너뛰어요."
+          }
+        ]
       },
       "cycles": [],
-      "log": []
+      "log": [
+        {
+          "date": "2026-09-30",
+          "events": [
+            {
+              "type": "buy",
+              "kind": "first",
+              "qty": 2,
+              "price": 78.03,
+              "tInc": 1
+            }
+          ]
+        }
+      ]
     }
   ],
-  "updatedAt": "2026-09-29T23:42:12.688Z"
+  "updatedAt": "2026-10-01T02:04:21.701Z"
 }
