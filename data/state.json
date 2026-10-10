@@ -13,10 +13,10 @@
       "cycleNo": 1,
       "cycleStart": "2026-09-30",
       "cycleSeed": 3200,
-      "lastProcessed": "2026-10-08",
-      "refClose": 80.23,
+      "lastProcessed": "2026-10-09",
+      "refClose": 81.28,
       "pending": {
-        "basedOn": "2026-10-08",
+        "basedOn": "2026-10-09",
         "phase": "front",
         "unit": 160.21,
         "starPct": 13.5,
@@ -89,9 +89,13 @@
         {
           "date": "2026-10-08",
           "events": []
+        },
+        {
+          "date": "2026-10-09",
+          "events": []
         }
       ]
     }
   ],
-  "updatedAt": "2026-10-09T02:55:16.873Z"
+  "updatedAt": "2026-10-10T02:16:53.173Z"
 }
