@@ -6,37 +6,46 @@
       "ticker": "TQQQ",
       "splits": 20,
       "seed": 3200,
-      "cash": 3043.94,
-      "qty": 2,
-      "avg": 78.03,
-      "T": 1,
+      "cash": 2895.7,
+      "qty": 4,
+      "avg": 76.075,
+      "T": 2,
       "cycleNo": 1,
       "cycleStart": "2026-09-30",
       "cycleSeed": 3200,
-      "lastProcessed": "2026-10-13",
-      "refClose": 78.81,
+      "lastProcessed": "2026-10-14",
+      "refClose": 74.12,
       "pending": {
-        "basedOn": "2026-10-13",
+        "basedOn": "2026-10-14",
         "phase": "front",
-        "unit": 160.21,
-        "starPct": 13.5,
-        "starPoint": 88.56,
+        "unit": 160.87,
+        "starPct": 12,
+        "starPoint": 85.2,
         "orders": [
           {
             "side": "buy",
             "kind": "avg",
             "type": "LOC",
-            "price": 78.03,
+            "price": 76.08,
             "qty": 2,
             "tInc": 1,
             "label": "평단 매수 · 1회 매수금 전부 (소액 보정)"
           },
           {
             "side": "sell",
+            "kind": "quarter",
+            "type": "LOC",
+            "price": 85.2,
+            "qty": 1,
+            "tInc": 0,
+            "label": "쿼터 매도 · 보유의 1/4, 별지점"
+          },
+          {
+            "side": "sell",
             "kind": "target",
             "type": "LIMIT",
-            "price": 89.73,
-            "qty": 2,
+            "price": 87.49,
+            "qty": 3,
             "tInc": 0,
             "label": "목표가 매도 · 나머지 전부, 평단 +15%"
           }
@@ -45,10 +54,6 @@
           {
             "level": "info",
             "text": "절반 금액으로는 1주를 살 수 없어서 1회 매수금을 평단 LOC 한 건으로 모았어요. 원래 규칙과 조금 달라요."
-          },
-          {
-            "level": "info",
-            "text": "보유 수량이 4주 미만이라 쿼터 매도는 건너뛰어요."
           }
         ]
       },
@@ -101,9 +106,21 @@
         {
           "date": "2026-10-13",
           "events": []
+        },
+        {
+          "date": "2026-10-14",
+          "events": [
+            {
+              "type": "buy",
+              "kind": "avg",
+              "qty": 2,
+              "price": 74.12,
+              "tInc": 1
+            }
+          ]
         }
       ]
     }
   ],
-  "updatedAt": "2026-10-14T01:51:11.513Z"
+  "updatedAt": "2026-10-15T01:25:46.046Z"
 }
