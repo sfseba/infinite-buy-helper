@@ -6,27 +6,27 @@
       "ticker": "TQQQ",
       "splits": 20,
       "seed": 3200,
-      "cash": 2895.7,
-      "qty": 4,
-      "avg": 76.075,
-      "T": 2,
+      "cash": 2748.06,
+      "qty": 6,
+      "avg": 75.3233,
+      "T": 3,
       "cycleNo": 1,
       "cycleStart": "2026-09-30",
       "cycleSeed": 3200,
-      "lastProcessed": "2026-10-14",
-      "refClose": 74.12,
+      "lastProcessed": "2026-10-15",
+      "refClose": 73.82,
       "pending": {
-        "basedOn": "2026-10-14",
+        "basedOn": "2026-10-15",
         "phase": "front",
-        "unit": 160.87,
-        "starPct": 12,
-        "starPoint": 85.2,
+        "unit": 161.65,
+        "starPct": 10.5,
+        "starPoint": 83.23,
         "orders": [
           {
             "side": "buy",
             "kind": "avg",
             "type": "LOC",
-            "price": 76.08,
+            "price": 75.32,
             "qty": 2,
             "tInc": 1,
             "label": "평단 매수 · 1회 매수금 전부 (소액 보정)"
@@ -35,7 +35,7 @@
             "side": "sell",
             "kind": "quarter",
             "type": "LOC",
-            "price": 85.2,
+            "price": 83.23,
             "qty": 1,
             "tInc": 0,
             "label": "쿼터 매도 · 보유의 1/4, 별지점"
@@ -44,8 +44,8 @@
             "side": "sell",
             "kind": "target",
             "type": "LIMIT",
-            "price": 87.49,
-            "qty": 3,
+            "price": 86.62,
+            "qty": 5,
             "tInc": 0,
             "label": "목표가 매도 · 나머지 전부, 평단 +15%"
           }
@@ -118,9 +118,21 @@
               "tInc": 1
             }
           ]
+        },
+        {
+          "date": "2026-10-15",
+          "events": [
+            {
+              "type": "buy",
+              "kind": "avg",
+              "qty": 2,
+              "price": 73.82,
+              "tInc": 1
+            }
+          ]
         }
       ]
     }
   ],
-  "updatedAt": "2026-10-15T01:25:46.046Z"
+  "updatedAt": "2026-10-16T01:16:06.443Z"
 }
