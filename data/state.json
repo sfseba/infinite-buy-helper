@@ -6,37 +6,46 @@
       "ticker": "TQQQ",
       "splits": 20,
       "seed": 3200,
-      "cash": 2748.06,
-      "qty": 6,
-      "avg": 75.3233,
-      "T": 3,
+      "cash": 2470.36,
+      "qty": 10,
+      "avg": 72.964,
+      "T": 5,
       "cycleNo": 1,
       "cycleStart": "2026-09-30",
       "cycleSeed": 3200,
-      "lastProcessed": "2026-10-15",
-      "refClose": 73.82,
+      "lastProcessed": "2026-10-19",
+      "refClose": 70.64,
       "pending": {
-        "basedOn": "2026-10-15",
+        "basedOn": "2026-10-19",
         "phase": "front",
-        "unit": 161.65,
-        "starPct": 10.5,
-        "starPoint": 83.23,
+        "unit": 164.69,
+        "starPct": 7.5,
+        "starPoint": 78.44,
         "orders": [
           {
             "side": "buy",
             "kind": "avg",
             "type": "LOC",
-            "price": 75.32,
-            "qty": 2,
-            "tInc": 1,
-            "label": "평단 매수 · 1회 매수금 전부 (소액 보정)"
+            "price": 72.96,
+            "qty": 1,
+            "tInc": 0.5,
+            "label": "평단 매수 · 1회 매수금의 절반"
+          },
+          {
+            "side": "buy",
+            "kind": "star",
+            "type": "LOC",
+            "price": 78.43,
+            "qty": 1,
+            "tInc": 0.5,
+            "label": "별지점 매수 · 1회 매수금의 절반 (별지점 − $0.01)"
           },
           {
             "side": "sell",
             "kind": "quarter",
             "type": "LOC",
-            "price": 83.23,
-            "qty": 1,
+            "price": 78.44,
+            "qty": 2,
             "tInc": 0,
             "label": "쿼터 매도 · 보유의 1/4, 별지점"
           },
@@ -44,18 +53,13 @@
             "side": "sell",
             "kind": "target",
             "type": "LIMIT",
-            "price": 86.62,
-            "qty": 5,
+            "price": 83.91,
+            "qty": 8,
             "tInc": 0,
             "label": "목표가 매도 · 나머지 전부, 평단 +15%"
           }
         ],
-        "notes": [
-          {
-            "level": "info",
-            "text": "절반 금액으로는 1주를 살 수 없어서 1회 매수금을 평단 LOC 한 건으로 모았어요. 원래 규칙과 조금 달라요."
-          }
-        ]
+        "notes": []
       },
       "cycles": [],
       "log": [
@@ -130,9 +134,40 @@
               "tInc": 1
             }
           ]
+        },
+        {
+          "date": "2026-10-16",
+          "events": [
+            {
+              "type": "buy",
+              "kind": "avg",
+              "qty": 2,
+              "price": 68.21,
+              "tInc": 1
+            }
+          ]
+        },
+        {
+          "date": "2026-10-19",
+          "events": [
+            {
+              "type": "buy",
+              "kind": "avg",
+              "qty": 1,
+              "price": 70.64,
+              "tInc": 0.5
+            },
+            {
+              "type": "buy",
+              "kind": "star",
+              "qty": 1,
+              "price": 70.64,
+              "tInc": 0.5
+            }
+          ]
         }
       ]
     }
   ],
-  "updatedAt": "2026-10-17T01:15:54.940Z"
+  "updatedAt": "2026-10-20T01:45:33.708Z"
 }
