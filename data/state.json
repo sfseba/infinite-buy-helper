@@ -6,27 +6,27 @@
       "ticker": "TQQQ",
       "splits": 20,
       "seed": 3200,
-      "cash": 1991.51,
-      "qty": 17,
-      "avg": 71.0876,
-      "T": 8.5,
+      "cash": 1854.65,
+      "qty": 19,
+      "avg": 70.8079,
+      "T": 9.5,
       "cycleNo": 1,
       "cycleStart": "2026-09-30",
       "cycleSeed": 3200,
-      "lastProcessed": "2026-10-23",
-      "refClose": 66.29,
+      "lastProcessed": "2026-10-26",
+      "refClose": 68.43,
       "pending": {
-        "basedOn": "2026-10-23",
+        "basedOn": "2026-10-26",
         "phase": "front",
-        "unit": 173.17,
-        "starPct": 2.25,
-        "starPoint": 72.69,
+        "unit": 176.63,
+        "starPct": 0.75,
+        "starPoint": 71.34,
         "orders": [
           {
             "side": "buy",
             "kind": "avg",
             "type": "LOC",
-            "price": 71.09,
+            "price": 70.81,
             "qty": 1,
             "tInc": 0.5,
             "label": "평단 매수 · 1회 매수금의 절반"
@@ -35,7 +35,7 @@
             "side": "buy",
             "kind": "star",
             "type": "LOC",
-            "price": 72.68,
+            "price": 71.33,
             "qty": 1,
             "tInc": 0.5,
             "label": "별지점 매수 · 1회 매수금의 절반 (별지점 − $0.01)"
@@ -44,7 +44,7 @@
             "side": "sell",
             "kind": "quarter",
             "type": "LOC",
-            "price": 72.69,
+            "price": 71.34,
             "qty": 4,
             "tInc": 0,
             "label": "쿼터 매도 · 보유의 1/4, 별지점"
@@ -53,8 +53,8 @@
             "side": "sell",
             "kind": "target",
             "type": "LIMIT",
-            "price": 81.75,
-            "qty": 13,
+            "price": 81.43,
+            "qty": 15,
             "tInc": 0,
             "label": "목표가 매도 · 나머지 전부, 평단 +15%"
           }
@@ -234,9 +234,28 @@
               "tInc": 0.5
             }
           ]
+        },
+        {
+          "date": "2026-10-26",
+          "events": [
+            {
+              "type": "buy",
+              "kind": "avg",
+              "qty": 1,
+              "price": 68.43,
+              "tInc": 0.5
+            },
+            {
+              "type": "buy",
+              "kind": "star",
+              "qty": 1,
+              "price": 68.43,
+              "tInc": 0.5
+            }
+          ]
         }
       ]
     }
   ],
-  "updatedAt": "2026-10-24T01:32:15.902Z"
+  "updatedAt": "2026-10-27T02:00:51.364Z"
 }
