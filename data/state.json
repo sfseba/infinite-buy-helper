@@ -6,37 +6,46 @@
       "ticker": "TQQQ",
       "splits": 20,
       "seed": 3200,
-      "cash": 1783.61,
-      "qty": 20,
+      "cash": 2145.41,
+      "qty": 15,
       "avg": 70.8195,
-      "T": 10,
+      "T": 7.5,
       "cycleNo": 1,
       "cycleStart": "2026-09-30",
       "cycleSeed": 3200,
-      "lastProcessed": "2026-10-27",
-      "refClose": 71.04,
+      "lastProcessed": "2026-10-28",
+      "refClose": 72.36,
       "pending": {
-        "basedOn": "2026-10-27",
-        "phase": "back",
-        "unit": 178.36,
-        "starPct": 0,
-        "starPoint": 70.82,
+        "basedOn": "2026-10-28",
+        "phase": "front",
+        "unit": 171.63,
+        "starPct": 3.75,
+        "starPoint": 73.48,
         "orders": [
+          {
+            "side": "buy",
+            "kind": "avg",
+            "type": "LOC",
+            "price": 70.82,
+            "qty": 1,
+            "tInc": 0.5,
+            "label": "평단 매수 · 1회 매수금의 절반"
+          },
           {
             "side": "buy",
             "kind": "star",
             "type": "LOC",
-            "price": 70.81,
-            "qty": 2,
-            "tInc": 1,
-            "label": "별지점 매수 · 후반전, 1회 매수금 전부"
+            "price": 73.47,
+            "qty": 1,
+            "tInc": 0.5,
+            "label": "별지점 매수 · 1회 매수금의 절반 (별지점 − $0.01)"
           },
           {
             "side": "sell",
             "kind": "quarter",
             "type": "LOC",
-            "price": 70.82,
-            "qty": 5,
+            "price": 73.48,
+            "qty": 3,
             "tInc": 0,
             "label": "쿼터 매도 · 보유의 1/4, 별지점"
           },
@@ -45,7 +54,7 @@
             "kind": "target",
             "type": "LIMIT",
             "price": 81.44,
-            "qty": 15,
+            "qty": 12,
             "tInc": 0,
             "label": "목표가 매도 · 나머지 전부, 평단 +15%"
           }
@@ -256,9 +265,21 @@
               "tInc": 0.5
             }
           ]
+        },
+        {
+          "date": "2026-10-28",
+          "events": [
+            {
+              "type": "sell",
+              "kind": "quarter",
+              "qty": 5,
+              "price": 72.36,
+              "pnl": 7.7
+            }
+          ]
         }
       ]
     }
   ],
-  "updatedAt": "2026-10-28T02:09:15.646Z"
+  "updatedAt": "2026-10-29T02:23:06.066Z"
 }
