@@ -6,27 +6,27 @@
       "ticker": "TQQQ",
       "splits": 20,
       "seed": 3200,
-      "cash": 1518.37,
-      "qty": 25,
-      "avg": 67.5732,
-      "T": 12.5,
+      "cash": 1366.96,
+      "qty": 28,
+      "avg": 65.7407,
+      "T": 13.5,
       "cycleNo": 1,
       "cycleStart": "2026-09-30",
       "cycleSeed": 3200,
-      "lastProcessed": "2026-11-04",
-      "refClose": 62.24,
+      "lastProcessed": "2026-11-05",
+      "refClose": 50.47,
       "pending": {
-        "basedOn": "2026-11-04",
+        "basedOn": "2026-11-05",
         "phase": "back",
-        "unit": 202.45,
-        "starPct": -3.75,
-        "starPoint": 65.04,
+        "unit": 210.3,
+        "starPct": -5.25,
+        "starPoint": 62.29,
         "orders": [
           {
             "side": "buy",
             "kind": "star",
             "type": "LOC",
-            "price": 65.03,
+            "price": 62.28,
             "qty": 3,
             "tInc": 1,
             "label": "별지점 매수 · 후반전, 1회 매수금 전부"
@@ -35,8 +35,8 @@
             "side": "sell",
             "kind": "quarter",
             "type": "LOC",
-            "price": 65.04,
-            "qty": 6,
+            "price": 62.29,
+            "qty": 7,
             "tInc": 0,
             "label": "쿼터 매도 · 보유의 1/4, 별지점"
           },
@@ -44,8 +44,8 @@
             "side": "sell",
             "kind": "target",
             "type": "LIMIT",
-            "price": 77.71,
-            "qty": 19,
+            "price": 75.6,
+            "qty": 21,
             "tInc": 0,
             "label": "목표가 매도 · 나머지 전부, 평단 +15%"
           }
@@ -349,9 +349,21 @@
               "tInc": 1
             }
           ]
+        },
+        {
+          "date": "2026-11-05",
+          "events": [
+            {
+              "type": "buy",
+              "kind": "star",
+              "qty": 3,
+              "price": 50.47,
+              "tInc": 1
+            }
+          ]
         }
       ]
     }
   ],
-  "updatedAt": "2026-11-05T03:27:20.544Z"
+  "updatedAt": "2026-11-06T03:23:09.230Z"
 }
