@@ -6,28 +6,28 @@
       "ticker": "TQQQ",
       "splits": 20,
       "seed": 3200,
-      "cash": 1037.47,
-      "qty": 34,
-      "avg": 63.8302,
-      "T": 15.5,
+      "cash": 867.79,
+      "qty": 37,
+      "avg": 63.2407,
+      "T": 16.5,
       "cycleNo": 1,
       "cycleStart": "2026-09-30",
       "cycleSeed": 3200,
-      "lastProcessed": "2026-11-09",
-      "refClose": 57.58,
+      "lastProcessed": "2026-11-10",
+      "refClose": 56.56,
       "pending": {
-        "basedOn": "2026-11-09",
+        "basedOn": "2026-11-10",
         "phase": "back",
-        "unit": 230.55,
-        "starPct": -8.25,
-        "starPoint": 58.56,
+        "unit": 247.94,
+        "starPct": -9.75,
+        "starPoint": 57.07,
         "orders": [
           {
             "side": "buy",
             "kind": "star",
             "type": "LOC",
-            "price": 58.55,
-            "qty": 3,
+            "price": 57.06,
+            "qty": 4,
             "tInc": 1,
             "label": "별지점 매수 · 후반전, 1회 매수금 전부"
           },
@@ -35,8 +35,8 @@
             "side": "sell",
             "kind": "quarter",
             "type": "LOC",
-            "price": 58.56,
-            "qty": 8,
+            "price": 57.07,
+            "qty": 9,
             "tInc": 0,
             "label": "쿼터 매도 · 보유의 1/4, 별지점"
           },
@@ -44,8 +44,8 @@
             "side": "sell",
             "kind": "target",
             "type": "LIMIT",
-            "price": 73.4,
-            "qty": 26,
+            "price": 72.73,
+            "qty": 28,
             "tInc": 0,
             "label": "목표가 매도 · 나머지 전부, 평단 +15%"
           }
@@ -385,9 +385,21 @@
               "tInc": 1
             }
           ]
+        },
+        {
+          "date": "2026-11-10",
+          "events": [
+            {
+              "type": "buy",
+              "kind": "star",
+              "qty": 3,
+              "price": 56.56,
+              "tInc": 1
+            }
+          ]
         }
       ]
     }
   ],
-  "updatedAt": "2026-11-10T04:35:50.871Z"
+  "updatedAt": "2026-11-11T02:44:24.612Z"
 }
