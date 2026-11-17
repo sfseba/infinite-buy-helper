@@ -6,27 +6,27 @@
       "ticker": "TQQQ",
       "splits": 20,
       "seed": 3200,
-      "cash": 1059.07,
-      "qty": 34,
-      "avg": 62.4535,
-      "T": 14.375,
+      "cash": 899.98,
+      "qty": 37,
+      "avg": 61.6894,
+      "T": 15.375,
       "cycleNo": 1,
       "cycleStart": "2026-09-30",
       "cycleSeed": 3200,
-      "lastProcessed": "2026-11-13",
-      "refClose": 57.68,
+      "lastProcessed": "2026-11-16",
+      "refClose": 53.03,
       "pending": {
-        "basedOn": "2026-11-13",
+        "basedOn": "2026-11-16",
         "phase": "back",
-        "unit": 188.28,
-        "starPct": -6.5625,
-        "starPoint": 58.35,
+        "unit": 194.59,
+        "starPct": -8.0625,
+        "starPoint": 56.72,
         "orders": [
           {
             "side": "buy",
             "kind": "star",
             "type": "LOC",
-            "price": 58.34,
+            "price": 56.71,
             "qty": 3,
             "tInc": 1,
             "label": "별지점 매수 · 후반전, 1회 매수금 전부"
@@ -35,8 +35,8 @@
             "side": "sell",
             "kind": "quarter",
             "type": "LOC",
-            "price": 58.35,
-            "qty": 8,
+            "price": 56.72,
+            "qty": 9,
             "tInc": 0,
             "label": "쿼터 매도 · 보유의 1/4, 별지점"
           },
@@ -44,8 +44,8 @@
             "side": "sell",
             "kind": "target",
             "type": "LIMIT",
-            "price": 71.82,
-            "qty": 26,
+            "price": 70.94,
+            "qty": 28,
             "tInc": 0,
             "label": "목표가 매도 · 나머지 전부, 평단 +15%"
           }
@@ -433,9 +433,21 @@
               "tInc": 1
             }
           ]
+        },
+        {
+          "date": "2026-11-16",
+          "events": [
+            {
+              "type": "buy",
+              "kind": "star",
+              "qty": 3,
+              "price": 53.03,
+              "tInc": 1
+            }
+          ]
         }
       ]
     }
   ],
-  "updatedAt": "2026-11-14T03:08:00.057Z"
+  "updatedAt": "2026-11-17T05:03:14.293Z"
 }
