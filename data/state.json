@@ -6,27 +6,27 @@
       "ticker": "TQQQ",
       "splits": 20,
       "seed": 3200,
-      "cash": 899.98,
-      "qty": 37,
-      "avg": 61.6894,
-      "T": 15.375,
+      "cash": 744.55,
+      "qty": 40,
+      "avg": 60.9484,
+      "T": 16.375,
       "cycleNo": 1,
       "cycleStart": "2026-09-30",
       "cycleSeed": 3200,
-      "lastProcessed": "2026-11-16",
-      "refClose": 53.03,
+      "lastProcessed": "2026-11-17",
+      "refClose": 51.81,
       "pending": {
-        "basedOn": "2026-11-16",
+        "basedOn": "2026-11-17",
         "phase": "back",
-        "unit": 194.59,
-        "starPct": -8.0625,
-        "starPoint": 56.72,
+        "unit": 205.39,
+        "starPct": -9.5625,
+        "starPoint": 55.12,
         "orders": [
           {
             "side": "buy",
             "kind": "star",
             "type": "LOC",
-            "price": 56.71,
+            "price": 55.11,
             "qty": 3,
             "tInc": 1,
             "label": "별지점 매수 · 후반전, 1회 매수금 전부"
@@ -35,8 +35,8 @@
             "side": "sell",
             "kind": "quarter",
             "type": "LOC",
-            "price": 56.72,
-            "qty": 9,
+            "price": 55.12,
+            "qty": 10,
             "tInc": 0,
             "label": "쿼터 매도 · 보유의 1/4, 별지점"
           },
@@ -44,8 +44,8 @@
             "side": "sell",
             "kind": "target",
             "type": "LIMIT",
-            "price": 70.94,
-            "qty": 28,
+            "price": 70.09,
+            "qty": 30,
             "tInc": 0,
             "label": "목표가 매도 · 나머지 전부, 평단 +15%"
           }
@@ -445,9 +445,21 @@
               "tInc": 1
             }
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "events": [
+            {
+              "type": "buy",
+              "kind": "star",
+              "qty": 3,
+              "price": 51.81,
+              "tInc": 1
+            }
+          ]
         }
       ]
     }
   ],
-  "updatedAt": "2026-11-17T05:03:14.293Z"
+  "updatedAt": "2026-11-18T04:13:46.463Z"
 }
