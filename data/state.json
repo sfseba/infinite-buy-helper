@@ -6,28 +6,28 @@
       "ticker": "TQQQ",
       "splits": 20,
       "seed": 3200,
-      "cash": 744.55,
-      "qty": 40,
-      "avg": 60.9484,
-      "T": 16.375,
+      "cash": 587.23,
+      "qty": 43,
+      "avg": 60.3548,
+      "T": 17.375,
       "cycleNo": 1,
       "cycleStart": "2026-09-30",
       "cycleSeed": 3200,
-      "lastProcessed": "2026-11-17",
-      "refClose": 51.81,
+      "lastProcessed": "2026-11-18",
+      "refClose": 52.44,
       "pending": {
-        "basedOn": "2026-11-17",
+        "basedOn": "2026-11-18",
         "phase": "back",
-        "unit": 205.39,
-        "starPct": -9.5625,
-        "starPoint": 55.12,
+        "unit": 223.71,
+        "starPct": -11.0625,
+        "starPoint": 53.68,
         "orders": [
           {
             "side": "buy",
             "kind": "star",
             "type": "LOC",
-            "price": 55.11,
-            "qty": 3,
+            "price": 53.67,
+            "qty": 4,
             "tInc": 1,
             "label": "별지점 매수 · 후반전, 1회 매수금 전부"
           },
@@ -35,7 +35,7 @@
             "side": "sell",
             "kind": "quarter",
             "type": "LOC",
-            "price": 55.12,
+            "price": 53.68,
             "qty": 10,
             "tInc": 0,
             "label": "쿼터 매도 · 보유의 1/4, 별지점"
@@ -44,8 +44,8 @@
             "side": "sell",
             "kind": "target",
             "type": "LIMIT",
-            "price": 70.09,
-            "qty": 30,
+            "price": 69.41,
+            "qty": 33,
             "tInc": 0,
             "label": "목표가 매도 · 나머지 전부, 평단 +15%"
           }
@@ -457,9 +457,21 @@
               "tInc": 1
             }
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "events": [
+            {
+              "type": "buy",
+              "kind": "star",
+              "qty": 3,
+              "price": 52.44,
+              "tInc": 1
+            }
+          ]
         }
       ]
     }
   ],
-  "updatedAt": "2026-11-18T04:13:46.463Z"
+  "updatedAt": "2026-11-19T04:07:29.510Z"
 }
